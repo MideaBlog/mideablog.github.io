@@ -68,7 +68,7 @@ appledoc">
 <meta property="og:image" content="http://i12.tietuku.com/7642139687e0eb7e.png">
 <meta property="og:image" content="http://i13.tietuku.com/9f2ec1bb4e778b36.png">
 <meta property="og:image" content="http://i12.tietuku.com/d52c1219753b2f18.png">
-<meta property="og:updated_time" content="2016-02-24T03:23:16.000Z">
+<meta property="og:updated_time" content="2016-02-24T05:11:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AppleDoc Guide">
 <meta name="twitter:description" content="AppleDoc简介手工写文档是一件苦差事，appledoc 是一个能从源码中抽取注释生成文档的专用工具，简单方便，适于生成 apple 官网帮助风格的 html 文档，也可以直接集成到 Xcode 帮助（Docset 格式），这样后续只需要按照规定的格式在代码里写好注释就行了，无需单独再编写帮助文档（这个工具仅限于输出 apple 文档格式，如果是要图文并茂的文档，另行他法）。
@@ -251,12 +251,10 @@ appledoc">
         <h2 id="AppleDoc简介"><a href="#AppleDoc简介" class="headerlink" title="AppleDoc简介"></a>AppleDoc简介</h2><p>手工写文档是一件苦差事，appledoc 是一个能从源码中抽取注释生成文档的专用工具，简单方便，适于生成 apple 官网帮助风格的 html 文档，也可以直接集成到 Xcode 帮助（Docset 格式），这样后续只需要按照规定的格式在代码里写好注释就行了，无需单独再编写帮助文档（这个工具仅限于输出 apple 文档格式，如果是要图文并茂的文档，另行他法）。</p>
 <p>appledoc官网 <a href="http://gentlebytes.com/appledoc/" target="_blank" rel="external">http://gentlebytes.com/appledoc/</a></p>
 <p>github网址 <a href="https://github.com/tomaz/appledoc" target="_blank" rel="external">https://github.com/tomaz/appledoc</a></p>
-<p>##AppleDoc安装</p>
-<p>正常安装，在终端下操作只需三步，该工具是一个二进制可执行文件，缺省会安装到 <code>/usr/local/bin/</code> 目录下，安装步骤：</p>
+<h2 id="AppleDoc安装"><a href="#AppleDoc安装" class="headerlink" title="AppleDoc安装"></a>AppleDoc安装</h2><p>正常安装，在终端下操作只需三步，该工具是一个二进制可执行文件，缺省会安装到 <code>/usr/local/bin/</code> 目录下，安装步骤：</p>
 <p><code>git clone git://github.com/tomaz/appledoc.git</code></p><p><br><code>cd ./appledoc</code></p><p><br><code>sudo sh install-appledoc.sh</code></p>
 <p>另外，也可以去 <a href="https://github.com/tomaz/appledoc" target="_blank" rel="external">github网站</a> 上直接下载源码编译安装。</p>
-<p>##AppleDoc使用</p>
-<p>在终端下进入工程文件所在目录，运行下面的命令（注意命令最后有个小点），缺省会编译出 Docset 并安装进 Xcode。</p>
+<h2 id="AppleDoc使用"><a href="#AppleDoc使用" class="headerlink" title="AppleDoc使用"></a>AppleDoc使用</h2><p>在终端下进入工程文件所在目录，运行下面的命令（注意命令最后有个小点），缺省会编译出 Docset 并安装进 Xcode。</p>
 <p><code>appledoc --output ./doc --project-name MideaSDK --project-company MideaSDK --company-id cn.com.Midea .</code></p>
 <blockquote>
 <p>参数注明——</p><p><br>–output ./doc：设置输出目录为当前目录下的 doc 文件夹下，可以自己设置</p><p><br>–project-name MideaSDK：设置项目名为 “MideaSDK”，可自己设置</p><p><br>–project-name MideaSDK：设置项目名为 “MideaSDK”，可自己设置</p><p><br>–project-company MideaSDK：设置公司名为 “MideaSDK”，可自己设置</p><p><br>–company-id cn.com. MideaSDK：设置公司id为 “cn.com.MideaSDK”，可自己设置</p><p><br>.：当前目录</p>
@@ -273,21 +271,20 @@ appledoc">
 <p><code>appledoc --output ./doc --no-create-docset --ignore ./MSmartSDK/MSmartSDK/Internal/Vendors --project-name MideaSDK --project-company MideaSDK --company-id cn.com.Midea .</code></p>
 <p>当该命令完成后，在当前目录会生成一个 html 文件夹，使用浏览器打开<code>./doc/html/index.html</code>即可查看帮助文档。</p>
 <p>可以通过命令<code>appledoc --help</code>来查看 appledoc 所有参数用法。</p>
-<p>##AppleDoc注释语法</p>
-<p>首先，文档中的注释只有符合规范，才能被 appledoc 认可。</p>
-<p>凡是以 “///“、”/<em>*” 或 “/</em>!” 开头的注释块，都算所 appledoc 注释。下面是示例:</p>
+<h2 id="AppleDoc注释语法"><a href="#AppleDoc注释语法" class="headerlink" title="AppleDoc注释语法"></a>AppleDoc注释语法</h2><ul>
+<li><p>首先，文档中的注释只有符合规范，才能被 appledoc 认可。</p>
+</li>
+<li><p>凡是以 “///“、”/<em>*” 或 “/</em>!” 开头的注释块，都算所 appledoc 注释。下面是示例:</p>
 <blockquote>
-<p>/// 这是单行注释。</p><p><br>/<strong> 这也是单行注释 <em>/<p><br>/</p></em>! 同样是单行注释 */<p><br>/</p></strong> 这也是单行注释，</p><p></p>
-<ul>
-<li>第二行会接上第一行。<p><br>*/</p></li>
+<p><code>///</code> 这是单行注释。</p><p><br><code>/**</code> 这也是单行注释 <code>*/</code></p><p><br><code>/*!</code> 同样是单行注释 <code>*/</code></p><p><br><code>/**</code> 这也是单行注释，</p><p><br><code>*</code> 第二行会接上第一行。</p><p><br><code>*/</code></p>
+</blockquote>
+</li>
+<li><p>注释块中，每一行开头的空格和 “*” 字符多数情况都会被 appledoc 忽略。连续的两行(即没有间隔空行)的注释，将被合并成一个段落，并忽略换行，就像 html。</p>
+</li>
 </ul>
-</blockquote>
-<p>注释块中，每一行开头的空格和 “*” 字符多数情况都会被 appledoc 忽略。<br>连续的两行(即没有间隔空行)的注释，将被合并成一个段落，并忽略换行，就像 html。</p>
-<p>下面是一些常用的语法例子以及最终显示效果:</p>
-<blockquote>
-<p>/** 第一行是类的简介</p><p></p>
-</blockquote>
-<p> 无序列表: (每行以 ‘*’、’-‘、’+’ 开头):</p><p></p>
+<h3 id="下面是一个完整的语法例子以及最终显示效果"><a href="#下面是一个完整的语法例子以及最终显示效果" class="headerlink" title="下面是一个完整的语法例子以及最终显示效果:"></a>下面是一个完整的语法例子以及最终显示效果:</h3><p><code>/**</code> 类的简介 <code>【整个注释的示例 从“ /** ”开始,到 &quot; */ &quot;结束 】</code></p>
+<ul>
+<li><p>无序列表: (每行以 ‘*’、’-‘、’+’ 开头):</p>
 <blockquote>
 <ul>
 <li>this is the first line<p></p></li>
@@ -295,56 +292,82 @@ appledoc">
 <li>this is the third line<p></p></li>
 </ul>
 </blockquote>
-<p> 有序列表: (每行以 1.2.3、a.b.c 开头):</p><p></p>
+</li>
+<li><p>有序列表: (每行以 1.2.3、a.b.c 开头):</p>
 <blockquote>
 <p>a. this is the first line</p><p><br>b. this is the secode line</p><p></p>
 </blockquote>
-<p> 多级列表:</p><p></p>
+</li>
+<li><p>多级列表:</p>
 <blockquote>
 <ul>
-<li>this is the first line<p><br>  a. this is line a</p><p><br>  b. this is line b</p><p></p></li>
-<li>this is the second line<p><ol>
-<li>this in line 1<p></p></li>
-<li>this is line 2<p></p></li>
-</ol>
-</p></li>
+<li><p>this is the first line</p><p></p>
+<pre><code>a. this is line a&lt;p&gt;
+b. this is line b&lt;p&gt;
+</code></pre></li>
+<li><p>this is the second line</p><p></p>
+<pre><code>1. this in line 1&lt;p&gt;
+2. this is line 2
+</code></pre></li>
 </ul>
 </blockquote>
-<p> 标题:</p><p><br>&gt;</p>
-<h1 id="This-is-an-H1"><a href="#This-is-an-H1" class="headerlink" title="This is an H1"></a>This is an H1<p></p></h1><h2 id="This-is-an-H2"><a href="#This-is-an-H2" class="headerlink" title="This is an H2"></a>This is an H2<p></p></h2><h3 id="This-is-an-H3"><a href="#This-is-an-H3" class="headerlink" title="This is an H3"></a>This is an H3<p></p></h3><h4 id="This-is-an-h4"><a href="#This-is-an-h4" class="headerlink" title="This is an h4"></a>This is an h4<p></p></h4><h5 id="This-is-an-h5"><a href="#This-is-an-h5" class="headerlink" title="This is an h5"></a>This is an h5<p></p></h5><h6 id="This-is-an-H6"><a href="#This-is-an-H6" class="headerlink" title="This is an H6"></a>This is an H6<p></p></h6><p> 链接:</p>
+</li>
+<li><p>标题:</p>
 <blockquote>
-<p>普通URL直接写上，appledoc 会自动翻译成链接: <a href="http://www.midea.com/cn/" target="_blank" rel="external">http://www.midea.com/cn/</a></p><p><br> <a href="http://www.midea.com/cn/" target="_blank" rel="external">隐藏URL</a> 链接会隐藏实际URL.</p><p></p>
-</blockquote>
-<p> 表格:</p>
+<p><code># This is an H1</code> 效果： </p>
+<h1 id="This-is-an-H1"><a href="#This-is-an-H1" class="headerlink" title="This is an H1"></a>This is an H1</h1><p><code>## This is an H2</code> 效果:</p>
+<h2 id="This-is-an-H2"><a href="#This-is-an-H2" class="headerlink" title="This is an H2"></a>This is an H2</h2><p><code>### This is an H3</code> 效果:</p>
+<h3 id="This-is-an-H3"><a href="#This-is-an-H3" class="headerlink" title="This is an H3"></a>This is an H3</h3><p><code>#### This is an h4</code> 效果:</p>
+<h4 id="This-is-an-h4"><a href="#This-is-an-h4" class="headerlink" title="This is an h4"></a>This is an h4</h4><p><code>##### This is an h5</code> 效果:</p>
+<h5 id="This-is-an-h5"><a href="#This-is-an-h5" class="headerlink" title="This is an h5"></a>This is an h5</h5><p><code>###### This is an H6</code> 效果：</p>
+<h6 id="This-is-an-H6"><a href="#This-is-an-H6" class="headerlink" title="This is an H6"></a>This is an H6</h6></blockquote>
+</li>
+</ul>
+<ul>
+<li><p>链接:</p>
 <blockquote>
-<p>| header1 | header2 | header3 |</p><p><br> |———|:——-:|——–:|</p><p><br> | normal  |  center |  right  |</p><p><br> | cell    | cell    | cell    |</p><p></p>
+<p>普通URL直接写上<code>http://www.midea.com/cn/</code>，appledoc 会自动翻译成链接: <a href="http://www.midea.com/cn/" target="_blank" rel="external">http://www.midea.com/cn/</a><br><code>[隐藏URL](http://www.midea.com/cn/)</code> 链接会隐藏实际URL: <a href="http://www.midea.com/cn/" target="_blank" rel="external">隐藏URL</a>.</p>
 </blockquote>
-<p> 引用:</p>
+</li>
+<li><p>表格:</p>
 <blockquote>
-<p>这里会引用到方法 <code>someMethod:</code>，这里会引用到类 <code>YYColor</code></p><p><br> 这里会引用到一个代码块</p><p><br>     <code>void CMYK2RGB(float c, float m, float y, float k, 
-                    float *r, float *g, float *b) {
-         *r = (1 - c) * (1 - k);
-         *g = (1 - m) * (1 - k);
-         *b = (1 - y) * (1 - k);
-     }</code></p><p><br> @since iOS5.0</p>
+<p>| header1 | header2 | header3 |<br>|———|:——-:|——–:|<br>| normal  |  center |  right  |<br>| cell    | cell    | cell    |</p>
 </blockquote>
+</li>
+<li><p>引用:</p>
+<blockquote>
+<p>这里会引用到方法 <code>someMethod:</code>，<br>这里会引用到类 <code>YYColor</code><br>这里会引用到一个代码块<br>   `void CMYK2RGB(float c, float m, float y, float k,float <em>r, float </em>g, float *b) { </p>
+<pre><code>*r = (1 - c) * (1 - k);
+*g = (1 - m) * (1 - k);
+*b = (1 - y) * (1 - k);
+</code></pre><p>   }`</p>
+</blockquote>
+<p>@since iOS5.0</p>
+<p><code>*/</code></p>
+</li>
+</ul>
+<p><code>@interface AppledocExample : NSObject</code></p>
+<p>/<em>* 这里是属性说明: 名字 </em>/</p>
+<p><code>@property (nonatomic, strong) NSString *name;</code></p>
+<p> /** </p>
+<p> @brief 这里是方法的简介。该Tag不能放到类注释里。</p>
+<p> @exception UIColorException 这里是方法抛出异常的说明</p>
+<p> @see YYColor</p>
+<p> @see someMethod:</p>
+<p> @warning 这里是警告，会显示成蓝色的框框</p>
+<p> @bug 这里是bug，会显示成黄色的框框</p>
+<p> @param red   这里是参数说明1</p>
+<p> @param green 这里是参数说明2</p>
+<p> @param blue   这里是参数说明3</p>
+<p> @return  这里是返回值说明</p>
 <p> */</p>
-<p>@interface AppledocExample : NSObject</p>
-<blockquote>
-<p>这里是属性的说明</p><p><br>@property (nonatomic, strong) NSString *name;</p>
-</blockquote>
-<p> 方法简介<br>&gt;<br> /<em>*<br> @brief 这里是方法的简介。该Tag不能放到类注释里。<p><br> @exception UIColorException 这里是方法抛出异常的说明</p><p><br> @see YYColor</p><p><br> @see someMethod:</p><p><br> @warning 这里是警告，会显示成蓝色的框框</p><p><br> @bug 这里是bug，会显示成黄色的框框</p><p><br> @param red   这里是参数说明1</p><p><br> @param green 这里是参数说明2</p><p><br> @param blue   这里是参数说明3</p><p><br> @return  这里是返回值说明</p><p>
- </p></em>/</p>
-<ul>
-<li>(UIColor *)initWithRed:(int)red green:(int)green blue:(int)blue;</li>
-</ul>
-<blockquote>
-<ul>
-<li>(void)someMethod:(NSString *)str;<br>@end</li>
-</ul>
-</blockquote>
+<p><code>- (UIColor *)initWithRed:(int)red green:(int)green blue:(int)blue;</code></p>
+<p><code>- (void)someMethod:(NSString *)str;</code></p>
+<p><code>@end</code></p>
 <p>编译出的效果是这样：</p>
-<p><img src="http://i12.tietuku.com/7642139687e0eb7e.png" alt="Alt text"><br><img src="http://i13.tietuku.com/9f2ec1bb4e778b36.png" alt="Alt text"><br><img src="http://i12.tietuku.com/d52c1219753b2f18.png" alt="Alt text"></p>
+<p><img src="http://i12.tietuku.com/7642139687e0eb7e.png" alt="Alt text"></p>
+<p><img src="http://i13.tietuku.com/9f2ec1bb4e778b36.png" alt="Alt text"></p>
+<p><img src="http://i12.tietuku.com/d52c1219753b2f18.png" alt="Alt text"></p>
 
       
     </div>
@@ -452,7 +475,7 @@ appledoc">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AppleDoc简介"><span class="nav-number">1.</span> <span class="nav-text">AppleDoc简介</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#This-is-an-H1"><span class="nav-number"></span> <span class="nav-text">This is an H1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#This-is-an-H2"><span class="nav-number">1.</span> <span class="nav-text">This is an H2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#This-is-an-H3"><span class="nav-number">1.1.</span> <span class="nav-text">This is an H3</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#This-is-an-h4"><span class="nav-number">1.1.1.</span> <span class="nav-text">This is an h4</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#This-is-an-h5"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">This is an h5</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#This-is-an-H6"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">This is an H6</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AppleDoc简介"><span class="nav-number">1.</span> <span class="nav-text">AppleDoc简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AppleDoc安装"><span class="nav-number">2.</span> <span class="nav-text">AppleDoc安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AppleDoc使用"><span class="nav-number">3.</span> <span class="nav-text">AppleDoc使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AppleDoc注释语法"><span class="nav-number">4.</span> <span class="nav-text">AppleDoc注释语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下面是一个完整的语法例子以及最终显示效果"><span class="nav-number">4.1.</span> <span class="nav-text">下面是一个完整的语法例子以及最终显示效果:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#This-is-an-H1"><span class="nav-number"></span> <span class="nav-text">This is an H1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#This-is-an-H2"><span class="nav-number">1.</span> <span class="nav-text">This is an H2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#This-is-an-H3"><span class="nav-number">1.1.</span> <span class="nav-text">This is an H3</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#This-is-an-h4"><span class="nav-number">1.1.1.</span> <span class="nav-text">This is an h4</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#This-is-an-h5"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">This is an h5</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#This-is-an-H6"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">This is an H6</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
