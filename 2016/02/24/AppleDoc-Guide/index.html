@@ -68,7 +68,7 @@ appledoc">
 <meta property="og:image" content="http://i12.tietuku.com/7642139687e0eb7e.png">
 <meta property="og:image" content="http://i13.tietuku.com/9f2ec1bb4e778b36.png">
 <meta property="og:image" content="http://i12.tietuku.com/d52c1219753b2f18.png">
-<meta property="og:updated_time" content="2016-02-24T05:11:57.000Z">
+<meta property="og:updated_time" content="2016-02-24T05:39:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AppleDoc Guide">
 <meta name="twitter:description" content="AppleDoc简介手工写文档是一件苦差事，appledoc 是一个能从源码中抽取注释生成文档的专用工具，简单方便，适于生成 apple 官网帮助风格的 html 文档，也可以直接集成到 Xcode 帮助（Docset 格式），这样后续只需要按照规定的格式在代码里写好注释就行了，无需单独再编写帮助文档（这个工具仅限于输出 apple 文档格式，如果是要图文并茂的文档，另行他法）。
@@ -314,16 +314,9 @@ b. this is line b&lt;p&gt;
 </li>
 <li><p>标题:</p>
 <blockquote>
-<p><code># This is an H1</code> 效果： </p>
-<h1 id="This-is-an-H1"><a href="#This-is-an-H1" class="headerlink" title="This is an H1"></a>This is an H1</h1><p><code>## This is an H2</code> 效果:</p>
-<h2 id="This-is-an-H2"><a href="#This-is-an-H2" class="headerlink" title="This is an H2"></a>This is an H2</h2><p><code>### This is an H3</code> 效果:</p>
-<h3 id="This-is-an-H3"><a href="#This-is-an-H3" class="headerlink" title="This is an H3"></a>This is an H3</h3><p><code>#### This is an h4</code> 效果:</p>
-<h4 id="This-is-an-h4"><a href="#This-is-an-h4" class="headerlink" title="This is an h4"></a>This is an h4</h4><p><code>##### This is an h5</code> 效果:</p>
-<h5 id="This-is-an-h5"><a href="#This-is-an-h5" class="headerlink" title="This is an h5"></a>This is an h5</h5><p><code>###### This is an H6</code> 效果：</p>
-<h6 id="This-is-an-H6"><a href="#This-is-an-H6" class="headerlink" title="This is an H6"></a>This is an H6</h6></blockquote>
+<p><code># This is an H1</code><br><code>## This is an H2</code><br><code>### This is an H3</code><br><code>#### This is an h4</code><br><code>##### This is an h5</code><br><code>###### This is an H6</code></p>
+</blockquote>
 </li>
-</ul>
-<ul>
 <li><p>链接:</p>
 <blockquote>
 <p>普通URL直接写上<code>http://www.midea.com/cn/</code>，appledoc 会自动翻译成链接: <a href="http://www.midea.com/cn/" target="_blank" rel="external">http://www.midea.com/cn/</a><br><code>[隐藏URL](http://www.midea.com/cn/)</code> 链接会隐藏实际URL: <a href="http://www.midea.com/cn/" target="_blank" rel="external">隐藏URL</a>.</p>
@@ -475,7 +468,7 @@ b. this is line b&lt;p&gt;
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AppleDoc简介"><span class="nav-number">1.</span> <span class="nav-text">AppleDoc简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AppleDoc安装"><span class="nav-number">2.</span> <span class="nav-text">AppleDoc安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AppleDoc使用"><span class="nav-number">3.</span> <span class="nav-text">AppleDoc使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AppleDoc注释语法"><span class="nav-number">4.</span> <span class="nav-text">AppleDoc注释语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下面是一个完整的语法例子以及最终显示效果"><span class="nav-number">4.1.</span> <span class="nav-text">下面是一个完整的语法例子以及最终显示效果:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#This-is-an-H1"><span class="nav-number"></span> <span class="nav-text">This is an H1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#This-is-an-H2"><span class="nav-number">1.</span> <span class="nav-text">This is an H2</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#This-is-an-H3"><span class="nav-number">1.1.</span> <span class="nav-text">This is an H3</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#This-is-an-h4"><span class="nav-number">1.1.1.</span> <span class="nav-text">This is an h4</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#This-is-an-h5"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">This is an h5</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#This-is-an-H6"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">This is an H6</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AppleDoc简介"><span class="nav-number">1.</span> <span class="nav-text">AppleDoc简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AppleDoc安装"><span class="nav-number">2.</span> <span class="nav-text">AppleDoc安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AppleDoc使用"><span class="nav-number">3.</span> <span class="nav-text">AppleDoc使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AppleDoc注释语法"><span class="nav-number">4.</span> <span class="nav-text">AppleDoc注释语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下面是一个完整的语法例子以及最终显示效果"><span class="nav-number">4.1.</span> <span class="nav-text">下面是一个完整的语法例子以及最终显示效果:</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
