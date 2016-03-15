@@ -57,15 +57,31 @@
 
 
 
-<meta name="description" content="Midea">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Midea's Blog">
-<meta property="og:url" content="http://mideablog.github.io/index.html">
+<meta name="description" content="iOS 蓝牙4.0 BLE开发总结前言本文并不是指导大家去如何开发 iOS 蓝牙 BLE，因为网上这样的教程实在是太多了，而且写得好的也有不少，本文主要对最近在蓝牙开发中遇到的问题以及疑惑进行总结，给大家提供下借鉴。
+关于具体如何开发 iOS 蓝牙，推荐如下一些博客。
+Core Bluetooth框架之一：Central与Peripheral
+Core Bluetooth框架之二：后台处理
+Cor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS蓝牙4.0 BLE开发总结">
+<meta property="og:url" content="http://mideablog.github.io/2016/03/15/iOS-Bluetooth-Development-Summary/index.html">
 <meta property="og:site_name" content="Midea's Blog">
-<meta property="og:description" content="Midea">
+<meta property="og:description" content="iOS 蓝牙4.0 BLE开发总结前言本文并不是指导大家去如何开发 iOS 蓝牙 BLE，因为网上这样的教程实在是太多了，而且写得好的也有不少，本文主要对最近在蓝牙开发中遇到的问题以及疑惑进行总结，给大家提供下借鉴。
+关于具体如何开发 iOS 蓝牙，推荐如下一些博客。
+Core Bluetooth框架之一：Central与Peripheral
+Core Bluetooth框架之二：后台处理
+Cor">
+<meta property="og:image" content="http://i11.tietuku.cn/5f98a5352dfff5db.jpg">
+<meta property="og:image" content="http://i11.tietuku.cn/5c523ff235a471a1.png">
+<meta property="og:image" content="http://i11.tietuku.cn/eb76cf5f2d312aa2.png">
+<meta property="og:updated_time" content="2016-03-15T13:05:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Midea's Blog">
-<meta name="twitter:description" content="Midea">
+<meta name="twitter:title" content="iOS蓝牙4.0 BLE开发总结">
+<meta name="twitter:description" content="iOS 蓝牙4.0 BLE开发总结前言本文并不是指导大家去如何开发 iOS 蓝牙 BLE，因为网上这样的教程实在是太多了，而且写得好的也有不少，本文主要对最近在蓝牙开发中遇到的问题以及疑惑进行总结，给大家提供下借鉴。
+关于具体如何开发 iOS 蓝牙，推荐如下一些博客。
+Core Bluetooth框架之一：Central与Peripheral
+Core Bluetooth框架之二：后台处理
+Cor">
 
 
 
@@ -83,7 +99,7 @@
   };
 </script>
 
-  <title> Midea's Blog </title>
+  <title> iOS蓝牙4.0 BLE开发总结 | Midea's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -102,9 +118,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -183,15 +197,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
 
+  <div id="posts" class="posts-expand">
     
-
-    
-    
-
-    
-      
 
   
   
@@ -211,10 +219,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/03/15/iOS-Bluetooth-Development-Summary/" itemprop="url">
-                  iOS蓝牙4.0 BLE开发总结
-                </a>
+                iOS蓝牙4.0 BLE开发总结
               
             
           </h1>
@@ -252,9 +257,7 @@
       
 
       
-        
-          
-            <h1 id="iOS-蓝牙4-0-BLE开发总结"><a href="#iOS-蓝牙4-0-BLE开发总结" class="headerlink" title="iOS 蓝牙4.0 BLE开发总结"></a>iOS 蓝牙4.0 BLE开发总结</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文并不是指导大家去如何开发 iOS 蓝牙 BLE，因为网上这样的教程实在是太多了，而且写得好的也有不少，本文主要对最近在蓝牙开发中遇到的问题以及疑惑进行总结，给大家提供下借鉴。</p>
+        <h1 id="iOS-蓝牙4-0-BLE开发总结"><a href="#iOS-蓝牙4-0-BLE开发总结" class="headerlink" title="iOS 蓝牙4.0 BLE开发总结"></a>iOS 蓝牙4.0 BLE开发总结</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文并不是指导大家去如何开发 iOS 蓝牙 BLE，因为网上这样的教程实在是太多了，而且写得好的也有不少，本文主要对最近在蓝牙开发中遇到的问题以及疑惑进行总结，给大家提供下借鉴。</p>
 <p>关于具体如何开发 iOS 蓝牙，推荐如下一些博客。</p>
 <p><a href="http://southpeak.github.io/blog/2014/07/29/core-bluetoothkuang-jia-zhi-%5B%3F%5D-:centralyu-peripheral/" target="_blank" rel="external">Core Bluetooth框架之一：Central与Peripheral</a></p>
 <p><a href="http://southpeak.github.io/blog/2014/07/31/core-bluetoothkuang-jia-zhi-er-:hou-tai-chu-li/" target="_blank" rel="external">Core Bluetooth框架之二：后台处理</a></p>
@@ -322,8 +325,6 @@
 <p>目前，作为中心端的设备，是可以与多个设备端进行连接的，而作为设备端的设备，通常只能与一个中心端进行连接，通常在与一个中心端相连后，设备就会关闭广播。</p>
 <p>所以，在开发过程中，可能你的身边有多个蓝牙设备处于运行状态，但是一个也搜索不到，那就是因为别人的手机已经连接了。然而，在蓝牙设备上，并不是在连接之后就必须关闭广播，是可以在芯片上实现让他继续广播的，也就是其它中心端还是可以搜到这个设备，这个取决于应用场景。</p>
 
-          
-        
       
     </div>
 
@@ -331,216 +332,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/02/24/AppleDoc-Guide/" rel="next" title="AppleDoc Guide">
+                <i class="fa fa-chevron-left"></i> AppleDoc Guide
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/02/24/AppleDoc-Guide/" itemprop="url">
-                  AppleDoc Guide
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-24T11:20:39+08:00" content="2016-02-24">
-              2016-02-24
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h2 id="AppleDoc简介"><a href="#AppleDoc简介" class="headerlink" title="AppleDoc简介"></a>AppleDoc简介</h2><p>手工写文档是一件苦差事，appledoc 是一个能从源码中抽取注释生成文档的专用工具，简单方便，适于生成 apple 官网帮助风格的 html 文档，也可以直接集成到 Xcode 帮助（Docset 格式），这样后续只需要按照规定的格式在代码里写好注释就行了，无需单独再编写帮助文档（这个工具仅限于输出 apple 文档格式，如果是要图文并茂的文档，另行他法）。</p>
-<p>appledoc官网 <a href="http://gentlebytes.com/appledoc/" target="_blank" rel="external">http://gentlebytes.com/appledoc/</a></p>
-<p>github网址 <a href="https://github.com/tomaz/appledoc" target="_blank" rel="external">https://github.com/tomaz/appledoc</a></p>
-<h2 id="AppleDoc安装"><a href="#AppleDoc安装" class="headerlink" title="AppleDoc安装"></a>AppleDoc安装</h2><p>正常安装，在终端下操作只需三步，该工具是一个二进制可执行文件，缺省会安装到 <code>/usr/local/bin/</code> 目录下，安装步骤：</p>
-<p><code>git clone git://github.com/tomaz/appledoc.git</code></p><p><br><code>cd ./appledoc</code></p><p><br><code>sudo sh install-appledoc.sh</code></p>
-<p>另外，也可以去 <a href="https://github.com/tomaz/appledoc" target="_blank" rel="external">github网站</a> 上直接下载源码编译安装。</p>
-<h2 id="AppleDoc使用"><a href="#AppleDoc使用" class="headerlink" title="AppleDoc使用"></a>AppleDoc使用</h2><p>在终端下进入工程文件所在目录，运行下面的命令（注意命令最后有个小点），缺省会编译出 Docset 并安装进 Xcode。</p>
-<p><code>appledoc --output ./doc --project-name MideaSDK --project-company MideaSDK --company-id cn.com.Midea .</code></p>
-<blockquote>
-<p>参数注明——</p><p><br>–output ./doc：设置输出目录为当前目录下的 doc 文件夹下，可以自己设置</p><p><br>–project-name MideaSDK：设置项目名为 “MideaSDK”，可自己设置</p><p><br>–project-name MideaSDK：设置项目名为 “MideaSDK”，可自己设置</p><p><br>–project-company MideaSDK：设置公司名为 “MideaSDK”，可自己设置</p><p><br>–company-id cn.com. MideaSDK：设置公司id为 “cn.com.MideaSDK”，可自己设置</p><p><br>.：当前目录</p>
-</blockquote>
-<p>命令执行期间，会对整个工程目录进行扫描，并生成文档，期间可能在终端上会产生一些告警，说明哪些文件注释写得有问题或者无法生成文档，告警很直观，可以根据告警来修改注释的格式。</p>
-<blockquote>
-<p>目前知道 enum 枚举和 block 无法生成文档</p>
-</blockquote>
-<p>缺省会编译出的 Docset 是放在下面的路径：</p>
-<p><code>/Users/XXX/Library/Developer/Shared/Documentation/DocSets</code></p>
-<p>Docset格式，实际上是一个bundle，里面包含了一些 xml 和 html。显示包内容后就可以查看和修改了。如果需要放到网站上，或者拿出来给别人阅读，可以单独将 html 部分取出来就行。</p>
-<p>当该命令完成后，重启 Xcode 打开 Xcode 帮助文档，会发现其中新增了 MideaSDK 相关文档。</p>
-<p>如果不想编译成 Docset 格式，只需要 html 文档时，可以加上参数 <code>--no-create-docset</code>，如果不想扫描整个工程目录，需要忽略其中一些目录的时候，还可以加上 <code>--ignore</code>参数（注意命令行最后有个小点）：</p>
-<p><code>appledoc --output ./doc --no-create-docset --ignore ./MSmartSDK/MSmartSDK/Internal/Vendors --project-name MideaSDK --project-company MideaSDK --company-id cn.com.Midea .</code></p>
-<p>当该命令完成后，在当前目录会生成一个 html 文件夹，使用浏览器打开<code>./doc/html/index.html</code>即可查看帮助文档。</p>
-<p>可以通过命令<code>appledoc --help</code>来查看 appledoc 所有参数用法。</p>
-<h2 id="AppleDoc注释语法"><a href="#AppleDoc注释语法" class="headerlink" title="AppleDoc注释语法"></a>AppleDoc注释语法</h2><ul>
-<li><p>首先，文档中的注释只有符合规范，才能被 appledoc 认可。</p>
-</li>
-<li><p>凡是以 “///“、”/<em>*” 或 “/</em>!” 开头的注释块，都算所 appledoc 注释。下面是示例:</p>
-<blockquote>
-<p><code>///</code> 这是单行注释。</p><p><br><code>/**</code> 这也是单行注释 <code>*/</code></p><p><br><code>/*!</code> 同样是单行注释 <code>*/</code></p><p><br><code>/**</code> 这也是单行注释，</p><p><br><code>*</code> 第二行会接上第一行。</p><p><br><code>*/</code></p>
-</blockquote>
-</li>
-<li><p>注释块中，每一行开头的空格和 “*” 字符多数情况都会被 appledoc 忽略。连续的两行(即没有间隔空行)的注释，将被合并成一个段落，并忽略换行，就像 html。</p>
-</li>
-</ul>
-<h3 id="下面是一个完整的语法例子以及最终显示效果"><a href="#下面是一个完整的语法例子以及最终显示效果" class="headerlink" title="下面是一个完整的语法例子以及最终显示效果:"></a>下面是一个完整的语法例子以及最终显示效果:</h3><p><code>/**</code> 类的简介 <code>【整个注释的示例 从“ /** ”开始,到 &quot; */ &quot;结束 】</code></p>
-<ul>
-<li><p>无序列表: (每行以 ‘*’、’-‘、’+’ 开头):</p>
-<blockquote>
-<ul>
-<li>this is the first line<p></p></li>
-<li>this is the second line<p></p></li>
-<li>this is the third line<p></p></li>
-</ul>
-</blockquote>
-</li>
-<li><p>有序列表: (每行以 1.2.3、a.b.c 开头):</p>
-<blockquote>
-<p>a. this is the first line</p><p><br>b. this is the secode line</p><p></p>
-</blockquote>
-</li>
-<li><p>多级列表:</p>
-<blockquote>
-<ul>
-<li><p>this is the first line</p><p></p>
-<pre><code>a. this is line a&lt;p&gt;
-b. this is line b&lt;p&gt;
-</code></pre></li>
-<li><p>this is the second line</p><p></p>
-<pre><code>1. this in line 1&lt;p&gt;
-2. this is line 2
-</code></pre></li>
-</ul>
-</blockquote>
-</li>
-<li><p>标题:</p>
-<blockquote>
-<p><code># This is an H1</code><br><code>## This is an H2</code><br><code>### This is an H3</code><br><code>#### This is an h4</code><br><code>##### This is an h5</code><br><code>###### This is an H6</code></p>
-</blockquote>
-</li>
-<li><p>链接:</p>
-<blockquote>
-<p>普通URL直接写上<code>http://www.midea.com/cn/</code>，appledoc 会自动翻译成链接: <a href="http://www.midea.com/cn/" target="_blank" rel="external">http://www.midea.com/cn/</a><br><code>[隐藏URL](http://www.midea.com/cn/)</code> 链接会隐藏实际URL: <a href="http://www.midea.com/cn/" target="_blank" rel="external">隐藏URL</a>.</p>
-</blockquote>
-</li>
-<li><p>表格:</p>
-<blockquote>
-<p>| header1 | header2 | header3 |<br>|———|:——-:|——–:|<br>| normal  |  center |  right  |<br>| cell    | cell    | cell    |</p>
-</blockquote>
-</li>
-<li><p>引用:</p>
-<blockquote>
-<p>这里会引用到方法 <code>someMethod:</code>，<br>这里会引用到类 <code>YYColor</code><br>这里会引用到一个代码块<br>   `void CMYK2RGB(float c, float m, float y, float k,float <em>r, float </em>g, float *b) { </p>
-<pre><code>*r = (1 - c) * (1 - k);
-*g = (1 - m) * (1 - k);
-*b = (1 - y) * (1 - k);
-</code></pre><p>   }`</p>
-</blockquote>
-<p>@since iOS5.0</p>
-<p><code>*/</code></p>
-</li>
-</ul>
-<p><code>@interface AppledocExample : NSObject</code></p>
-<p>/<em>* 这里是属性说明: 名字 </em>/</p>
-<p><code>@property (nonatomic, strong) NSString *name;</code></p>
-<p> /** </p>
-<p> @brief 这里是方法的简介。该Tag不能放到类注释里。</p>
-<p> @exception UIColorException 这里是方法抛出异常的说明</p>
-<p> @see YYColor</p>
-<p> @see someMethod:</p>
-<p> @warning 这里是警告，会显示成蓝色的框框</p>
-<p> @bug 这里是bug，会显示成黄色的框框</p>
-<p> @param red   这里是参数说明1</p>
-<p> @param green 这里是参数说明2</p>
-<p> @param blue   这里是参数说明3</p>
-<p> @return  这里是返回值说明</p>
-<p> */</p>
-<p><code>- (UIColor *)initWithRed:(int)red green:(int)green blue:(int)blue;</code></p>
-<p><code>- (void)someMethod:(NSString *)str;</code></p>
-<p><code>@end</code></p>
-<p>编译出的效果是这样：</p>
-<p><img src="http://i12.tietuku.com/7642139687e0eb7e.png" alt="Alt text"></p>
-<p><img src="http://i13.tietuku.com/9f2ec1bb4e778b36.png" alt="Alt text"></p>
-<p><img src="http://i12.tietuku.com/d52c1219753b2f18.png" alt="Alt text"></p>
-
-          
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
 
-  </section>
-
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -548,6 +365,10 @@ b. this is line b&lt;p&gt;
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -567,8 +388,17 @@ b. this is line b&lt;p&gt;
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/default_avatar.jpg"
@@ -605,6 +435,23 @@ b. this is line b&lt;p&gt;
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS-蓝牙4-0-BLE开发总结"><span class="nav-number">1.</span> <span class="nav-text">iOS 蓝牙4.0 BLE开发总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么选择蓝牙技术，目前主流三种无线技术（WIFI，蓝牙，Zigbee）对比"><span class="nav-number">1.2.</span> <span class="nav-text">为什么选择蓝牙技术，目前主流三种无线技术（WIFI，蓝牙，Zigbee）对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是蓝牙4-0"><span class="nav-number">1.3.</span> <span class="nav-text">什么是蓝牙4.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#蓝牙4-0的三种模式"><span class="nav-number">1.4.</span> <span class="nav-text">蓝牙4.0的三种模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于-iPhone-蓝牙开发注意事项"><span class="nav-number">1.5.</span> <span class="nav-text">关于 iPhone 蓝牙开发注意事项</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1）iOS-系统本身只开放了-蓝牙-BLE-部分，而且蓝牙-BLE-并不是用来给你传输文件的，指望使用-iOS-蓝牙开发两个手机之间能快速传输文件这种-APP-的同学就算了。"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">1）iOS 系统本身只开放了 蓝牙 BLE 部分，而且蓝牙 BLE 并不是用来给你传输文件的，指望使用 iOS 蓝牙开发两个手机之间能快速传输文件这种 APP 的同学就算了。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2）iPhone-手机最多能同时连接多少蓝牙设备"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">2）iPhone 手机最多能同时连接多少蓝牙设备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3）开发完了蓝牙-APP，有什么工具可以协助蓝牙测试"><span class="nav-number">1.5.0.3.</span> <span class="nav-text">3）开发完了蓝牙 APP，有什么工具可以协助蓝牙测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4）虽然-iOS-系统限制了只能使用蓝牙-BLE，但蓝牙-BLE-的传输速率到底如何呢"><span class="nav-number">1.5.0.4.</span> <span class="nav-text">4）虽然 iOS 系统限制了只能使用蓝牙 BLE，但蓝牙 BLE 的传输速率到底如何呢</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5）关于-iOS-上蓝牙-BLE-一次读写（注意是一次读写，不是一共读写）最大能读写多少个字节的疑问"><span class="nav-number">1.5.0.5.</span> <span class="nav-text">5）关于 iOS 上蓝牙 BLE 一次读写（注意是一次读写，不是一共读写）最大能读写多少个字节的疑问</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6）开发-iOS-蓝牙设备端（CBPeripheral）过程中遇到的问题"><span class="nav-number">1.5.0.6.</span> <span class="nav-text">6）开发 iOS 蓝牙设备端（CBPeripheral）过程中遇到的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7）作为中心端，连接上蓝牙设备之后，如何获取蓝牙设备的-MAC-地址"><span class="nav-number">1.5.0.7.</span> <span class="nav-text">7）作为中心端，连接上蓝牙设备之后，如何获取蓝牙设备的 MAC 地址</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8）为什么两个-iPhone-手机都打开蓝牙之后，还是相互搜不到对方呢"><span class="nav-number">1.5.0.8.</span> <span class="nav-text">8）为什么两个 iPhone 手机都打开蓝牙之后，还是相互搜不到对方呢</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
       
 
     </div>
@@ -679,6 +526,167 @@ b. this is line b&lt;p&gt;
   
 
   
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
 
   
 
